@@ -73,7 +73,7 @@ def bresenham_circulo(r):
             y -= 1
             pk += (2 * x) + 1 - (2 * y)
         print(f"k: {k:>2} | Pk: {curr_pk:>4} | ({x}, {y}) | 2xk: {2 * x:>2} | 2yk: {2 * y:>2}")
-        # Agregar los 8 puntos simétricos en una sola instrucción
+        # Agregar los 8 puntos simétricos o en "espejo"
         simetricos = [(x, y), (-x, y), (x, -y), (-x, -y), (y, x), (-y, x), (y, -x), (-y, -x)]
         puntos.extend(simetricos)
         k += 1
